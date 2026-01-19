@@ -7,9 +7,11 @@ import { Mail, Linkedin } from "lucide-react";
 
 export function Contact() {
     const handleCopyEmail = () => {
-        const user = "fabiankaraben";
-        const domain = "gmail.com";
-        const email = `${user}@${domain}`;
+        const userP1 = "fabian";
+        const userP2 = "karaben";
+        const domainP1 = "gma";
+        const domainP2 = "il.com"
+        const email = `${userP1}${userP2}@${domainP1}${domainP2}`;
 
         navigator.clipboard.writeText(email).then(() => {
             toast.success("Email copied to clipboard!");
@@ -59,10 +61,7 @@ export function Contact() {
 
                 <footer className="mt-24 pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
                     <p>© {new Date().getFullYear()} Fabián Karaben. All rights reserved.</p>
-                    <div className="flex gap-8">
-                        <a href="#" className="hover:text-foreground">Privacy Policy</a>
-                        <a href="#" className="hover:text-foreground">Terms of Service</a>
-                    </div>
+                    <p className="italic">Thanks for stopping by!</p>
                 </footer>
             </div>
         </section>
