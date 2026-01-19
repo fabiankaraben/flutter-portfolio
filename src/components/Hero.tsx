@@ -39,7 +39,7 @@ export function Hero() {
                     variants={item}
                     className="text-2xl md:text-4xl font-medium text-muted-foreground"
                 >
-                    Flutter Engineer with a <span className="text-foreground italic">Platform Mindset.</span>
+                    Flutter Engineer with a <span className="text-transparent bg-clip-text bg-linear-to-r from-violet-600 to-blue-500 font-bold">Platform Mindset.</span>
                 </motion.h2>
 
                 <motion.p
@@ -53,7 +53,7 @@ export function Hero() {
                 <motion.div variants={item} className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
                     <a
                         href="#projects"
-                        className="px-8 py-4 bg-primary text-primary-foreground rounded-full font-medium transition-transform hover:scale-105 active:scale-95"
+                        className="px-8 py-4 bg-foreground text-background rounded-full font-medium transition-all hover:scale-105 active:scale-95 hover:shadow-lg hover:shadow-foreground/20"
                     >
                         View Projects
                     </a>

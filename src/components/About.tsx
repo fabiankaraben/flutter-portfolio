@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export function About() {
     return (
-        <section id="about" className="py-24 bg-secondary/30">
+        <section id="about" className="py-24">
             <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
@@ -15,7 +15,7 @@ export function About() {
                     className="space-y-6"
                 >
                     <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Why the Full Stack Matters</h2>
-                    <div className="w-20 h-1 bg-foreground rounded-full" />
+                    <div className="w-20 h-1 bg-linear-to-r from-violet-600 to-blue-500 rounded-full" />
                 </motion.div>
 
                 <motion.div

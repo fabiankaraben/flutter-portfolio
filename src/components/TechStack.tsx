@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 const categories = [
     {
@@ -39,15 +40,15 @@ export function TechStack() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: idx * 0.1 }}
                             viewport={{ once: true }}
-                            className="p-8 border rounded-2xl bg-card hover:border-foreground/50 transition-colors group"
+                            className="p-8 border rounded-2xl bg-card hover:shadow-lg transition-all group hover:border-blue-500/50"
                         >
-                            <h3 className="text-xl font-bold mb-6 group-hover:text-foreground transition-colors">
+                            <h3 className="text-xl font-bold mb-6 transition-colors text-blue-700 dark:text-blue-500">
                                 {category.title}
                             </h3>
                             <ul className="space-y-4">
                                 {category.skills.map((skill) => (
                                     <li key={skill} className="text-muted-foreground flex items-center gap-2">
-                                        <span className="w-1.5 h-1.5 bg-foreground/20 rounded-full" />
+                                        <span className="w-1.5 h-1.5 rounded-full bg-blue-600/40" />
                                         {skill}
                                     </li>
                                 ))}
