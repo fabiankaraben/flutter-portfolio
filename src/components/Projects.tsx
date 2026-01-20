@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
+import Image from "next/image";
 
 const projects = [
     {
@@ -11,6 +12,23 @@ const projects = [
         tech: ["Flutter", "Riverpod", "TMDB API", "Hive"],
         link: "https://cineflow.xeost.workers.dev",
         github: "https://github.com/fabiankaraben/cineflow-app",
+        image: "/projects/cineflow-featured.webp",
+    },
+    {
+        title: "PennyVault",
+        description: "A privacy-first personal finance app with offline support. Tracks expenses and visualizes spending habits with beautiful charts in a clean 'Fintech' interface.",
+        tech: ["Flutter", "Provider", "Hive", "fl_chart"],
+        link: "https://pennyvault.xeost.workers.dev/",
+        github: "https://github.com/fabiankaraben/pennyvault-app",
+        image: "/projects/pennyvault-featured.webp",
+    },
+    {
+        title: "StreamDesk",
+        description: "A desktop-optimized customer support dashboard. Features a split-view interface, real-time chat simulation, and persistent chat history.",
+        tech: ["Flutter", "BLoC", "Hydrated BLoC"],
+        link: "https://streamdesk.xeost.workers.dev/",
+        github: "https://github.com/fabiankaraben/streamdesk-app",
+        image: "/projects/streamdesk-featured.webp",
     },
 ];
 
@@ -36,9 +54,13 @@ export function Projects() {
                             viewport={{ once: true }}
                             className="bg-card border rounded-3xl overflow-hidden hover:shadow-[0_0_30px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_0_30px_rgba(255,255,255,0.05)] transition-all flex flex-col"
                         >
-                            <div className="aspect-video bg-muted flex items-center justify-center">
-                                {/* Mock Image Placeholder */}
-                                <span className="text-muted-foreground font-mono text-xl">{project.title}</span>
+                            <div className="aspect-video bg-muted relative group-hover:scale-105 transition-transform duration-500">
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    fill
+                                    className="object-cover"
+                                />
                             </div>
 
                             <div className="p-8 space-y-4 grow flex flex-col">
